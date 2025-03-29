@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendations</title>
+    <link rel="stylesheet" href="css/books.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Ensures the body takes the full height of the screen */
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: red; /* Heading color */
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        marquee {
+            font-size: 1.5em;
+            margin: 20px 0;
+            color: #f39c12;
+        }
+
+        .book-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Aligns the items to the center */
+            width: 80%;
+        }
+
+        .book-list li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            background-color: #333;
+            border-radius: 15px;
+            padding: 25px; /* Increased padding for bigger boxes */
+            width: 30%; /* Adjust width */
+            transition: transform 0.3s ease-in-out;
+            animation: slideIn 1.5s ease-in-out;
+            box-sizing: border-box;
+        }
+
+        .book-list li:hover {
+            transform: scale(1.05);
+            background-color: #f39c12;
+        }
+
+        .book-list li img {
+            width: 150px; /* Increased image size */
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: transform 0.5s;
+        }
+
+        .book-list li:hover img {
+            transform: rotate(360deg);
+        }
+
+        .book-list p {
+            font-size: 1.5em;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .book-list {
+                justify-content: center; /* Centered alignment on smaller screens */
+            }
+
+            .book-list li {
+                width: 80%;
+            }
+
+            .book-list li img {
+                width: 100px;
+                height: 150px;
+            }
+
+            .book-list p {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Marquee for Top Books -->
+    <marquee>TOP TEN BOOKS TO RECOMMEND</marquee>
+
+    <!-- Recommended Books Section -->
+    <div class="recommended-books">
+      <h1>Top 10 Books</h1>
+        <ul class="book-list">
+            <li>
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/51/1984_first_edition_cover.jpg" alt="1984">
+                <p>1984 by George Orwell</p>
+            </li>
+            <li>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/330px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg" alt="To Kill a Mockingbird">
+                <p>To Kill a Mockingbird by Harper Lee</p>
+            </li>
+            <li>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg/330px-The_Great_Gatsby_Cover_1925_Retouched.jpg" alt="The Great Gatsby">
+                <p>The Great Gatsby by F. Scott Fitzgerald</p>
+            </li>
+            <li>
+                <img src="https://upload.wikimedia.org/wikipedia/en/a/a0/Cien_a%C3%B1os_de_soledad_%28book_cover%2C_1967%29.jpg" alt="One Hundred Years of Solitude">
+                <p>One Hundred Years of Solitude by Gabriel García Márquez</p>
+            </li>
+            <li>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Moby-Dick_FE_title_page.jpg/330px-Moby-Dick_FE_title_page.jpg" alt="Moby *****">
+                <p>Moby ***** by Herman Melville</p>
+            </li>
+            <li>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Tolstoy_-_War_and_Peace_-_first_edition%2C_1869.jpg/330px-Tolstoy_-_War_and_Peace_-_first_edition%2C_1869.jpg" alt="War and Peace">
+                <p>War and Peace by Leo Tolstoy</p>
+            </li>
+            <li>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/PrideAndPrejudiceTitlePage.jpg/330px-PrideAndPrejudiceTitlePage.jpg" alt="Pride and Prejudice">
+                <p>Pride and Prejudice by Jane Austen</p>
+            </li>
+            <li>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/The_Catcher_in_the_Rye_%281951%2C_first_edition_cover%29.jpg/330px-The_Catcher_in_the_Rye_%281951%2C_first_edition_cover%29.jpg" alt="The Catcher in the Rye">
+                <p>The Catcher in the Rye by J.D. Salinger</p>
+            </li>
+            <li>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Odyssey-crop.jpg/330px-Odyssey-crop.jpg" alt="The Odyssey">
+                <p>The Odyssey by Homer</p>
+            </li>
+            <li>
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/4b/Crimeandpunishmentcover.png" alt="Crime and Punishment">
+                <p>Crime and Punishment by Fyodor Dostoevsky</p>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

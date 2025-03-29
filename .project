@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Syaahi</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.python.pydev.PyDevBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.python.pydev.pythonNature</nature>
+		<nature>org.python.pydev.django.djangoNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>Syaahi/books.csv</name>
+			<type>1</type>
+			<location>C:/Users/DELL/Desktop/mini project/Books.csv</location>
+		</link>
+		<link>
+			<name>Syaahi/credits.csv</name>
+			<type>1</type>
+			<location>C:/Users/DELL/Desktop/tmdb_5000_credits.csv</location>
+		</link>
+		<link>
+			<name>Syaahi/movies.csv</name>
+			<type>1</type>
+			<location>C:/Users/DELL/Desktop/tmdb_5000_movies.csv</location>
+		</link>
+		<link>
+			<name>Syaahi/ratings.csv</name>
+			<type>1</type>
+			<location>C:/Users/DELL/Desktop/mini project/Ratings.csv</location>
+		</link>
+		<link>
+			<name>Syaahi/users.csv</name>
+			<type>1</type>
+			<location>C:/Users/DELL/Desktop/mini project/Users.csv</location>
+		</link>
+		<link>
+			<name>Syaahi/static/img/dune.jpg</name>
+			<type>1</type>
+			<location>C:/Users/DELL/Downloads/dune.jpg</location>
+		</link>
+		<link>
+			<name>Syaahi/static/img/fiction.jpg</name>
+			<type>1</type>
+			<location>C:/Users/DELL/Downloads/fiction.jpg</location>
+		</link>
+		<link>
+			<name>Syaahi/static/img/mythology.jpg</name>
+			<type>1</type>
+			<location>C:/Users/DELL/Downloads/mythology.jpg</location>
+		</link>
+		<link>
+			<name>Syaahi/static/img/romance.jpg</name>
+			<type>1</type>
+			<location>C:/Users/DELL/Downloads/romance.jpg</location>
+		</link>
+		<link>
+			<name>Syaahi/static/img/sci fi.jpg</name>
+			<type>1</type>
+			<location>C:/Users/DELL/Downloads/sci fi.jpg</location>
+		</link>
+		<link>
+			<name>Syaahi/static/img/self help.jpg</name>
+			<type>1</type>
+			<location>C:/Users/DELL/Downloads/self help.jpg</location>
+		</link>
+		<link>
+			<name>Syaahi/static/img/syaahi by sequill.jpeg</name>
+			<type>1</type>
+			<location>C:/Users/DELL/Downloads/Syaahi by Sequill.jpeg</location>
+		</link>
+		<link>
+			<name>Syaahi/static/img/syaahi logo.png</name>
+			<type>1</type>
+			<location>C:/Users/DELL/Downloads/syaahi logo.png</location>
+		</link>
+		<link>
+			<name>Syaahi/static/img/thriller.jpg</name>
+			<type>1</type>
+			<location>C:/Users/DELL/Downloads/thriller.jpg</location>
+		</link>
+	</linkedResources>
+</projectDescription>

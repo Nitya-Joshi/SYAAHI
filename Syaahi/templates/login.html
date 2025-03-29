@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login/Signup</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}"/>
+</head>
+<body>
+  <div class="signupFrm">
+    <!-- Main container for login and signup sections -->
+    <div class="container">
+      <h1><i>Syaahi</i></h1>
+      
+      <!-- Login Section -->
+      <div id="loginSection">
+        <form class="form" method="post" action="/login_check/">
+          {% csrf_token %}
+          <h1 class="title">Log In</h1>
+          
+          <div class="inputContainer">
+            <input type="text" class="input" placeholder="a" id="email" name="email" required>
+            <label for="email" class="label">Email</label>
+          </div>
+
+          <div class="inputContainer">
+            <input type="password" class="input" placeholder="a" id="pwd" name="pwd" required>
+            <label for="pwd" class="label">Password</label>
+          </div>
+
+          <input type="submit" class="submitBtn" id="login" name='login_btn' value="Login">
+          <p>Don't have an account? <span onclick="toggleForm()">Sign up</span></p>
+          <a href="signup/">Not with us yet?<br>Sign Up</a>
+
+          {% block content %}
+          <p><b>{{error_msg}}</b></p>
+          {% endblock %}
+        </form>
+      </div>
+
+      <!-- Signup Section (Initially Hidden) -->
+      <div id="signupSection" style="display: none;">
+        <form class="form" method="post" action="/signup_check/">
+          {% csrf_token %}
+          <h1 class="title">Sign Up</h1>
+
+          <div class="inputContainer">
+            <input type="text" class="input" placeholder="a" id="newUsername" name="newUsername" required>
+            <label for="newUsername" class="label">Username</label>
+          </div>
+
+          <div class="inputContainer">
+            <input type="email" class="input" placeholder="a" id="email" name="email" required>
+            <label for="email" class="label">Email</label>
+          </div>
+
+          <div class="inputContainer">
+            <input type="password" class="input" placeholder="a" id="newPassword" name="newPassword" required>
+            <label for="newPassword" class="label">Password</label>
+          </div>
+
+          <input type="submit" class="submitBtn" id="signup" name='signup_btn' value="Sign Up">
+          <p>Already have an account? <span onclick="toggleForm()">Login</span></p>
+
+          {% block content %}
+          <p><b>{{signup_error_msg}}</b></p>
+          {% endblock %}
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Linking external JavaScript file -->
+  <script src="{% static 'js/login.js' %}"></script>
+</body>
+</html>

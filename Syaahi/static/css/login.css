@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* Set global styling for the page, background, and font */
+body {
+  font-family: 'Lato', sans-serif;
+  background-image: url('../img/loginbg.jpg'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Main container for the form */
+.container {
+  background: rgba(255, 255, 255, 0.9); /* White background with opacity */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  text-align: center; /* Centers text and elements */
+}
+
+/* General form styling */
+.form {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px 30px;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+}
+
+/* Title styling */
+h1 {
+  margin-bottom: 20px;
+  color: darkred; /* Red color for the title */
+  font-size: 36px;
+}
+
+h2 {
+  margin-top: 0;
+  color: darkred; /* Red color for the subtitle */
+}
+
+/* Label and input fields styling */
+label {
+  display: block;
+  margin: 10px 0 5px;
+  color: black;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center; /* Aligns text inside the input */
+  font-size: 16px;
+  outline: none;
+}
+
+/* Input container styling with red/black theme */
+.inputContainer {
+  position: relative;
+  height: 45px;
+  margin-bottom: 17px;
+}
+
+/* Focus effects for input fields */
+.input:focus {
+  border: 2px solid darkred;
+}
+
+/* Styling for input label */
+.label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 0 4px;
+  background-color: white;
+  color: #DADCE0;
+  font-size: 16px;
+  transition: 0.5s;
+  z-index: 0;
+}
+
+/* Placeholder hiding */
+::placeholder {
+  color: transparent;
+}
+
+/* Form button styling with hover effect */
+.button, .submitBtn {
+  background-color: darkred; /* Red theme for the button */
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover, .submitBtn:hover {
+  background-color: #a60000; /* Darker red on hover */
+  transform: translateY(-2px);
+}
+
+/* Link and paragraph styling */
+p {
+  margin-top: 10px;
+  color: black;
+}
+
+a {
+  color: darkred;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+/* Image logo styling */
+img {
+  background-color: white;
+  width: 50%;
+  margin-bottom: 20px;
+}

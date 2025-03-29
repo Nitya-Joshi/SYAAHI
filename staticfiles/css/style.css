@@ -1,0 +1,53 @@
+*{
+    font-family: Helvetica;
+
+}
+
+.górny,.górny1{
+    background-color: rgb(146, 184, 112);
+    text-align: center;
+    width: 50%;
+    height: 170px;
+
+    float: left;
+
+}
+
+.banner,.stopka{
+    background-color: rgb(100, 61, 49);
+    color: white;
+    text-align: center;
+    height: 80px;
+    padding: 5px;
+
+    clear: both;
+}
+
+.lewy,.prawy{
+    background-color: rgb(146, 184, 112);
+    width: 50%;
+    height: 450px;
+
+    float: left;
+
+}
+
+
+
+.zamów{
+    background-image: url(zelki.png);
+    padding-right: 30px;
+    padding-bottom: 120px;
+    font-size: 150%;
+    text-decoration: none;
+}
+table,td{
+    border:2px dotted green;
+    margin: 30px;
+    padding: 20px;
+}
+h1{
+    font-size: 250%;
+    letter-spacing: 20px;
+
+}

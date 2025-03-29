@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blend</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212; /* Darker background for better contrast */
+            color: #fff; /* White text color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Marquee styles */
+        .marquee {
+            color: #f39c12; /* Orange color for marquee text */
+            font-size: 22px;
+            padding: 10px 0;
+            background-color: #333; /* Darker background for marquee */
+            width: 100%;
+            text-align: center; /* Center marquee text */
+            position: relative; /* Position relative for better control */
+            overflow: hidden; /* Hide overflow */
+        }
+
+        /* Marquee animation */
+        .marquee p {
+            display: inline-block;
+            animation: marquee 15s linear infinite; /* Animation for the marquee text */
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translate(100%, 0);
+            }
+            100% {
+                transform: translate(-100%, 0);
+            }
+        }
+
+        /* Container for the movie cards */
+        .container {
+            width: 90%; /* Ensure the container does not stretch too wide */
+            margin: 20px auto; /* Center the container */
+            padding: 20px;
+        }
+
+        /* Grid layout for movie cards */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+            gap: 20px; /* Space between the cards */
+        }
+
+        /* Styles for each movie card */
+        .movie-card {
+            background-color: #1e1e1e; /* Darker card background */
+            border-radius: 10px;
+            padding: 15px;
+            transition: transform 0.3s, box-shadow 0.3s; /* Transition effects */
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1); /* Soft shadow */
+            border: 1px solid #e74c3c; /* Red border for contrast */
+            text-align: center; /* Center content inside each card */
+        }
+
+        .movie-card:hover {
+            transform: scale(1.05); /* Scale up on hover */
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3); /* Increase shadow on hover */
+        }
+
+        /* Movie title styles */
+        .movie-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: red; /* Orange color for titles */
+        }
+
+        /* Styles for the book cover image */
+        .book-cover {
+            border-radius: 5px;
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s; /* Image transition */
+        }
+
+        .book-cover:hover {
+            transform: scale(1.05); /* Zoom effect on image hover */
+        }
+
+        /* Movie details */
+        .movie-details {
+            text-align: left;
+            font-size: 14px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee">
+        <p>Welcome to the Movie Recommendations! Explore the best adaptations from books!</p>
+    </div>
+<body>
+
+    <header>
+        <b>Recommended Movies Based on Books</b>
+    </header>
+
+    <div class="container">
+        <div class="movie-grid">
+
+            <!-- Movie Card 1 -->
+            <div class="movie-card">
+                <div class="movie-title">The Lord of the Rings: The Fellowship of the Ring</div>
+                <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/f/fb/Lord_Rings_Fellowship_Ring.jpg" alt="Book Cover">
+                <div class="movie-details">
+                    <p><strong>Book Title:</strong> The Fellowship of the Ring</p>
+                    <p><strong>Author:</strong> J.R.R. Tolkien</p>
+                    <p><strong>Release Year:</strong> 2001</p>
+                    <p><strong>Genre:</strong> Fantasy</p>
+                    <p><strong>IMDb Rating:</strong> 8.8</p>
+                </div>
+            </div>
+
+            <!-- Movie Card 2 -->
+            <div class="movie-card">
+                <div class="movie-title">Harry Potter and the Sorcerer's Stone</div>
+                <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Harry_Potter_and_the_Philosopher%27s_Stone_banner.jpg/330px-Harry_Potter_and_the_Philosopher%27s_Stone_banner.jpg" alt="Book Cover">
+                <div class="movie-details">
+                    <p><strong>Book Title:</strong> Harry Potter and the Philosopher's Stone</p>
+                    <p><strong>Author:</strong> J.K. Rowling</p>
+                    <p><strong>Release Year:</strong> 2001</p>
+                    <p><strong>Genre:</strong> Fantasy</p>
+                    <p><strong>IMDb Rating:</strong> 7.6</p>
+                </div>
+            </div>
+
+            <!-- Movie Card 3 -->
+            <div class="movie-card">
+                <div class="movie-title">The Great Gatsby</div>
+                <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg/330px-The_Great_Gatsby_Cover_1925_Retouched.jpg" alt="Book Cover">
+                <div class="movie-details">
+                    <p><strong>Book Title:</strong> The Great Gatsby</p>
+                    <p><strong>Author:</strong> F. Scott Fitzgerald</p>
+                    <p><strong>Release Year:</strong> 2013</p>
+                    <p><strong>Genre:</strong> Drama</p>
+                    <p><strong>IMDb Rating:</strong> 7.2</p>
+                </div>
+            </div>
+
+            <!-- Add more movie cards up to 40 -->
+
+            <!-- Movie Card 40 -->
+            <div class="movie-card">
+                <div class="movie-title">Blade Runner 2049</div>
+                <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/9/9f/Blade_Runner_%281982_poster%29.png" alt="Book Cover">
+                <div class="movie-details">
+                    <p><strong>Book Title:</strong> Do Androids Dream of Electric Sheep?</p>
+                    <p><strong>Author:</strong> Philip K. *****</p>
+                    <p><strong>Release Year:</strong> 2017</p>
+                    <p><strong>Genre:</strong> Sci-Fi, Thriller</p>
+                    <p><strong>IMDb Rating:</strong> 8.0</p>
+                </div>
+            </div>
+            <div class="movie-card">
+    <div class="movie-title">The Hunger Games</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/4/42/HungerGamesPoster.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> The Hunger Games</p>
+        <p><strong>Author:</strong> Suzanne Collins</p>
+        <p><strong>Release Year:</strong> 2012</p>
+        <p><strong>Genre:</strong> Action, Sci-Fi</p>
+        <p><strong>IMDb Rating:</strong> 7.2</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">The Godfather</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/1/1c/Godfather_ver1.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> The Godfather</p>
+        <p><strong>Author:</strong> Mario Puzo</p>
+        <p><strong>Release Year:</strong> 1972</p>
+        <p><strong>Genre:</strong> Crime, Drama</p>
+        <p><strong>IMDb Rating:</strong> 9.2</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">Pride and Prejudice</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/0/03/Prideandprejudiceposter.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> Pride and Prejudice</p>
+        <p><strong>Author:</strong> Jane Austen</p>
+        <p><strong>Release Year:</strong> 2005</p>
+        <p><strong>Genre:</strong> Romance</p>
+        <p><strong>IMDb Rating:</strong> 7.8</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">The Shining</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/1/1d/The_Shining_%281980%29_U.K._release_poster_-_The_tide_of_terror_that_swept_America_IS_HERE.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> The Shining</p>
+        <p><strong>Author:</strong> Stephen King</p>
+        <p><strong>Release Year:</strong> 1980</p>
+        <p><strong>Genre:</strong> Horror</p>
+        <p><strong>IMDb Rating:</strong> 8.4</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">Jurassic Park</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/9/93/Jurassic_Park_%28franchise_logo%29.png" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> Jurassic Park</p>
+        <p><strong>Author:</strong> Michael Crichton</p>
+        <p><strong>Release Year:</strong> 1993</p>
+        <p><strong>Genre:</strong> Adventure, Sci-Fi</p>
+        <p><strong>IMDb Rating:</strong> 8.1</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">Fight Club</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> Fight Club</p>
+        <p><strong>Author:</strong> Chuck Palahniuk</p>
+        <p><strong>Release Year:</strong> 1999</p>
+        <p><strong>Genre:</strong> Drama, Thriller</p>
+        <p><strong>IMDb Rating:</strong> 8.8</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">The Girl with the Dragon Tattoo</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/b/bc/Thegirlwiththedragontattoo.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> The Girl with the Dragon Tattoo</p>
+        <p><strong>Author:</strong> Stieg Larsson</p>
+        <p><strong>Release Year:</strong> 2011</p>
+        <p><strong>Genre:</strong> Thriller, Mystery</p>
+        <p><strong>IMDb Rating:</strong> 7.8</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">The Chronicles of Narnia: The Lion, the Witch and the Wardrobe</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/c/cb/The_Chronicles_of_Narnia_box_set_cover.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> The Lion, the Witch and the Wardrobe</p>
+        <p><strong>Author:</strong> C.S. Lewis</p>
+        <p><strong>Release Year:</strong> 2005</p>
+        <p><strong>Genre:</strong> Fantasy</p>
+        <p><strong>IMDb Rating:</strong> 6.9</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">The Fault in Our Stars</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/4/41/The_Fault_in_Our_Stars_%28Official_Film_Poster%29.png" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> The Fault in Our Stars</p>
+        <p><strong>Author:</strong> John Green</p>
+        <p><strong>Release Year:</strong> 2014</p>
+        <p><strong>Genre:</strong> Romance, Drama</p>
+        <p><strong>IMDb Rating:</strong> 7.7</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">Gone Girl</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/0/05/Gone_Girl_Poster.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> Gone Girl</p>
+        <p><strong>Author:</strong> Gillian Flynn</p>
+        <p><strong>Release Year:</strong> 2014</p>
+        <p><strong>Genre:</strong> Thriller, Mystery</p>
+        <p><strong>IMDb Rating:</strong> 8.1</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">The Silence of the Lambs</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/8/86/The_Silence_of_the_Lambs_poster.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> The Silence of the Lambs</p>
+        <p><strong>Author:</strong> Thomas Harris</p>
+        <p><strong>Release Year:</strong> 1991</p>
+        <p><strong>Genre:</strong> Thriller</p>
+        <p><strong>IMDb Rating:</strong> 8.6</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">The Martian</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/c/cd/The_Martian_film_poster.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> The Martian</p>
+        <p><strong>Author:</strong> Andy Weir</p>
+        <p><strong>Release Year:</strong> 2015</p>
+        <p><strong>Genre:</strong> Sci-Fi, Adventure</p>
+        <p><strong>IMDb Rating:</strong> 8.0</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">Life of Pi</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/5/57/Life_of_Pi_2012_Poster.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> Life of Pi</p>
+        <p><strong>Author:</strong> Yann Martel</p>
+        <p><strong>Release Year:</strong> 2012</p>
+        <p><strong>Genre:</strong> Adventure</p>
+        <p><strong>IMDb Rating:</strong> 7.9</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">Dune</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Dune_%282021_film%29.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> Dune</p>
+        <p><strong>Author:</strong> Frank Herbert</p>
+        <p><strong>Release Year:</strong> 2021</p>
+        <p><strong>Genre:</strong> Sci-Fi, Adventure</p>
+        <p><strong>IMDb Rating:</strong> 8.0</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">To Kill a Mockingbird</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/To_Kill_a_Mockingbird_%281963_US_theatrical_poster%29.jpg/330px-To_Kill_a_Mockingbird_%281963_US_theatrical_poster%29.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> To Kill a Mockingbird</p>
+        <p><strong>Author:</strong> Harper Lee</p>
+        <p><strong>Release Year:</strong> 1962</p>
+        <p><strong>Genre:</strong> Drama</p>
+        <p><strong>IMDb Rating:</strong> 8.3</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">The Da Vinci Code</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e9/The_da_vinci_code_final.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> The Da Vinci Code</p>
+        <p><strong>Author:</strong> Dan Brown</p>
+        <p><strong>Release Year:</strong> 2006</p>
+        <p><strong>Genre:</strong> Mystery, Thriller</p>
+        <p><strong>IMDb Rating:</strong> 6.6</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">The Hobbit: An Unexpected Journey</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/b/b3/The_Hobbit-_An_Unexpected_Journey.jpeg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> The Hobbit</p>
+        <p><strong>Author:</strong> J.R.R. Tolkien</p>
+        <p><strong>Release Year:</strong> 2012</p>
+        <p><strong>Genre:</strong> Fantasy, Adventure</p>
+        <p><strong>IMDb Rating:</strong> 7.8</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">Les Misérables</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/b/b0/Les-miserables-movie-poster1.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> Les Misérables</p>
+        <p><strong>Author:</strong> Victor Hugo</p>
+        <p><strong>Release Year:</strong> 2012</p>
+        <p><strong>Genre:</strong> Drama, Musical</p>
+        <p><strong>IMDb Rating:</strong> 7.5</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">The Kite Runner</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/b/b8/Kite_Runner_film.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> The Kite Runner</p>
+        <p><strong>Author:</strong> Khaled Hosseini</p>
+        <p><strong>Release Year:</strong> 2007</p>
+        <p><strong>Genre:</strong> Drama</p>
+        <p><strong>IMDb Rating:</strong> 7.6</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">American Psycho</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/0/0c/American_Psycho.png" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> American Psycho</p>
+        <p><strong>Author:</strong> Bret Easton Ellis</p>
+        <p><strong>Release Year:</strong> 2000</p>
+        <p><strong>Genre:</strong> Crime, Drama</p>
+        <p><strong>IMDb Rating:</strong> 7.6</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">The Perks of Being a Wallflower</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/0/0b/The_Perks_of_Being_a_Wallflower_Poster.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> The Perks of Being a Wallflower</p>
+        <p><strong>Author:</strong> Stephen Chbosky</p>
+        <p><strong>Release Year:</strong> 2012</p>
+        <p><strong>Genre:</strong> Drama, Romance</p>
+        <p><strong>IMDb Rating:</strong> 7.9</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">Atonement</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e4/Atonement_UK_poster.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> Atonement</p>
+        <p><strong>Author:</strong> Ian McEwan</p>
+        <p><strong>Release Year:</strong> 2007</p>
+        <p><strong>Genre:</strong> Drama, Romance</p>
+        <p><strong>IMDb Rating:</strong> 7.8</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">The Road</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/a/a7/The_Road_movie_poster.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> The Road</p>
+        <p><strong>Author:</strong> Cormac McCarthy</p>
+        <p><strong>Release Year:</strong> 2009</p>
+        <p><strong>Genre:</strong> Drama, Sci-Fi</p>
+        <p><strong>IMDb Rating:</strong> 7.2</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">Shutter Island</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/7/76/Shutterislandposter.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> Shutter Island</p>
+        <p><strong>Author:</strong> Dennis Lehane</p>
+        <p><strong>Release Year:</strong> 2010</p>
+        <p><strong>Genre:</strong> Mystery, Thriller</p>
+        <p><strong>IMDb Rating:</strong> 8.2</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">Little Women</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/9/9d/Little_Women_%282019_film%29.jpeg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> Little Women</p>
+        <p><strong>Author:</strong> Louisa May Alcott</p>
+        <p><strong>Release Year:</strong> 2019</p>
+        <p><strong>Genre:</strong> Drama, Romance</p>
+        <p><strong>IMDb Rating:</strong> 7.8</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">The Giver</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/0/02/The_Giver_poster.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> The Giver</p>
+        <p><strong>Author:</strong> Lois Lowry</p>
+        <p><strong>Release Year:</strong> 2014</p>
+        <p><strong>Genre:</strong> Drama, Sci-Fi</p>
+        <p><strong>IMDb Rating:</strong> 6.4</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">A Walk to Remember</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/d/dc/A_Walk_to_Remember_Poster.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> A Walk to Remember</p>
+        <p><strong>Author:</strong> Nicholas Sparks</p>
+        <p><strong>Release Year:</strong> 2002</p>
+        <p><strong>Genre:</strong> Drama, Romance</p>
+        <p><strong>IMDb Rating:</strong> 7.4</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">The Princess Bride</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/d/db/Princess_bride.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> The Princess Bride</p>
+        <p><strong>Author:</strong> William Goldman</p>
+        <p><strong>Release Year:</strong> 1987</p>
+        <p><strong>Genre:</strong> Fantasy, Adventure</p>
+        <p><strong>IMDb Rating:</strong> 8.1</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">No Country for Old Men</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8b/No_Country_for_Old_Men_poster.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> No Country for Old Men</p>
+        <p><strong>Author:</strong> Cormac McCarthy</p>
+        <p><strong>Release Year:</strong> 2007</p>
+        <p><strong>Genre:</strong> Crime, Drama</p>
+        <p><strong>IMDb Rating:</strong> 8.2</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">Slumdog Millionaire</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/9/92/Slumdog_Millionaire_poster.png" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> Q & A</p>
+        <p><strong>Author:</strong> Vikas Swarup</p>
+        <p><strong>Release Year:</strong> 2008</p>
+        <p><strong>Genre:</strong> Drama, Romance</p>
+        <p><strong>IMDb Rating:</strong> 8.0</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">The Outsiders</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/f/fa/Outsidersposter.jpeg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> The Outsiders</p>
+        <p><strong>Author:</strong> S.E. Hinton</p>
+        <p><strong>Release Year:</strong> 1983</p>
+        <p><strong>Genre:</strong> Drama, Crime</p>
+        <p><strong>IMDb Rating:</strong> 7.1</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">Stardust</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/6/6f/Stardust_promo_poster.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> Stardust</p>
+        <p><strong>Author:</strong> Neil Gaiman</p>
+        <p><strong>Release Year:</strong> 2007</p>
+        <p><strong>Genre:</strong> Fantasy, Adventure</p>
+        <p><strong>IMDb Rating:</strong> 7.6</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">Game of Thrones</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/Game_of_Thrones_title_card.jpg/330px-Game_of_Thrones_title_card.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> A Song of Ice and Fire</p>
+        <p><strong>Author:</strong> George R.R. Martin</p>
+        <p><strong>Release Year:</strong> 2011</p>
+        <p><strong>Genre:</strong> Fantasy, Adventure</p>
+        <p><strong>IMDb Rating:</strong> 9.3</p>
+    </div>
+</div>
+<div class="movie-card">
+    <div class="movie-title">The Haunting of Hill House</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/thumb/9/92/The_Haunting_of_Hill_House.jpg/330px-The_Haunting_of_Hill_House.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> The Haunting of Hill House</p>
+        <p><strong>Author:</strong> Shirley Jackson</p>
+        <p><strong>Release Year:</strong> 2018</p>
+        <p><strong>Genre:</strong> Horror, Drama</p>
+        <p><strong>IMDb Rating:</strong> 8.6</p>
+    </div>
+</div>
+<!-- Movie Card 86 -->
+<div class="movie-card">
+    <div class="movie-title">Bridgerton</div>
+    <img class="book-cover" src="https://th.bing.com/th/id/OIP.8JDIq0RyD10SrKZgNbfA5QHaJQ?rs=1&amp;pid=ImgDetMain" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> Bridgerton Series</p>
+        <p><strong>Author:</strong> Julia Quinn</p>
+        <p><strong>Release Year:</strong> 2020</p>
+        <p><strong>Genre:</strong> Romance, Drama</p>
+        <p><strong>IMDb Rating:</strong> 7.3</p>
+    </div>
+</div>
+<!-- Movie Card 87 -->
+<div class="movie-card">
+    <div class="movie-title">One Day</div>
+    <img class="book-cover" src="https://upload.wikimedia.org/wikipedia/en/a/ad/One_Day_Poster.jpg" alt="Book Cover">
+    <div class="movie-details">
+        <p><strong>Book Title:</strong> One Day</p>
+        <p><strong>Author:</strong> David Nicholls</p>
+        <p><strong>Release Year:</strong> 2011</p>
+        <p><strong>Genre:</strong> Romance, Drama</p>
+        <p><strong>IMDb Rating:</strong> 7.0</p>
+    </div>
+</div>
+
+
+
+        </div>
+    </div>
+
+    <footer>
+        © 2024 Movies Based on Books. All Rights Reserved.
+    </footer>
+</body>
+
+
+    
+
+

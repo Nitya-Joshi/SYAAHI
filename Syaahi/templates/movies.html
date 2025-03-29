@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendations</title>
+    <link rel="stylesheet" href="{% static 'css/movies.css' %}">
+</head>
+<body>
+
+    <h1>Recommended Movies</h1>
+    <div class="recommended-books">
+        <ul>
+            {% for movie in recommended %}
+                <li>{{ movie }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <h1>Top 10 Movies of All Time</h1>
+    <div class="top-books">
+        <ul>
+            {% for movie in top_10 %}
+                <li>{{ movie }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
